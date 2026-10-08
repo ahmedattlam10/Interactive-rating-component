@@ -1,0 +1,211 @@
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: var(--white-clr);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:root {
+  --white-clr: hsl(0, 100%, 100%);
+  --grey-500-clr: hsl(217, 12%, 63%);
+  --grey-900-clr: hsl(213, 19%, 18%);
+  --grey-950-clr: hsl(216, 12%, 8%);
+  --orange-500-clr: hsl(25, 97%, 53%);
+  --grad-top-clr: hsl(215, 20%, 17%);
+  --grad-bottom-clr: hsl(216, 24%, 12%);
+
+  --fw-bold: 700;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--grey-950-clr);
+}
+
+.page {
+  padding: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate-card {
+  padding: 1.5rem;
+}
+
+.rate-card,
+.thanks-card {
+  background: radial-gradient(
+    circle,
+    var(--grad-top-clr),
+    var(--grad-bottom-clr)
+  );
+  border-radius: 20px;
+  width: 100%;
+}
+
+.rate-card img {
+  background-color: var(--grey-900-clr);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.rate-title {
+  margin-top: 1.5rem;
+  color: var(--white-clr);
+  font-size: 1.75rem;
+}
+
+.rate-desc,
+.thanks-card-desc {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  color: var(--grey-500-clr);
+  line-height: 1.7;
+}
+
+.rating-options {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.rating-options input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rate-num {
+  color: var(--grey-500-clr);
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: var(--grey-900-clr);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.rating-options input:checked + .rate-num {
+  background-color: var(--white-clr);
+  color: var(--grey-950-clr);
+  outline: 1px solid var(--white-clr);
+}
+
+.rate-num:hover,
+.rating-options input:focus-visible + .rate-num {
+  background-color: var(--orange-500-clr);
+  color: var(--grey-950-clr);
+}
+
+.rating-options input:focus-visible + .rate-num {
+  outline: 1px solid var(--orange-500-clr);
+  outline-offset: 3px;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 30px;
+  color: var(--grey-950-clr);
+  font-weight: var(--fw-bold);
+  background-color: var(--orange-500-clr);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--white-clr);
+}
+
+.submit-btn:focus-visible {
+  outline: 1px solid var(--white-clr);
+  outline-offset: 3px;
+  background-color: var(--white-clr);
+}
+
+.thanks-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.rating-result {
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  color: var(--orange-500-clr);
+  background-color: var(--grey-900-clr);
+  border-radius: 30px;
+  padding: 0.6rem 0.8rem;
+}
+
+.thanks-card-title {
+  color: var(--white-clr);
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.thanks-card-desc {
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .rate-card,
+  .thanks-card {
+    max-width: 25.75rem;
+  }
+  .rate-card {
+    padding: 2rem 1.5rem;
+  }
+  .rate-title {
+    margin-top: 1.5rem;
+  }
+  .rate-desc {
+    font-size: 15px;
+  }
+  .rate-num {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
