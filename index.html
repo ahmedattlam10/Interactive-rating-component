@@ -30,8 +30,9 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="rating-options">
-          <input id="rating-1" type="radio" name="rating" value="1" />
+        <fieldest class="rating-options">
+          <legend class="sr-only">Choose a rating from 1 to 5</legend>
+          <input id="rating-1" type="radio" name="rating" value="1" required />
           <label class="rate-num" for="rating-1">1</label>
           <input id="rating-2" type="radio" name="rating" value="2" />
           <label class="rate-num" for="rating-2">2</label>
@@ -41,16 +42,16 @@
           <label class="rate-num" for="rating-4">4</label>
           <input id="rating-5" type="radio" name="rating" value="5" />
           <label class="rate-num" for="rating-5">5</label>
-        </div>
+        </fieldest>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
 
-      <div class="thanks-card hidden">
+      <div class="thanks-card hidden" aria-live="polite">
         <img src="images/illustration-thank-you.svg" alt="" />
         <p class="rating-result">
           You selected <span class="selected-rate"></span> out of 5
         </p>
-        <h1 class="thanks-card-title">Thank you!</h1>
+        <h1 class="thanks-card-title" tabindex="-1">Thank you!</h1>
         <p class="thanks-card-desc">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
