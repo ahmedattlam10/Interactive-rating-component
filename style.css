@@ -4,7 +4,7 @@
   color: var(--white-clr);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--grey-500-clr);
 }
 
 *,
@@ -31,9 +31,9 @@ input {
 
 :root {
   --white-clr: hsl(0, 100%, 100%);
-  --grey-500-clr: hsl(217, 12%, 63%);
+  --grey-500-clr: #959eac;
   --grey-900-clr: hsl(213, 19%, 18%);
-  --grey-950-clr: hsl(216, 12%, 8%);
+  --grey-950-clr: #121417;
   --orange-500-clr: hsl(25, 97%, 53%);
   --grad-top-clr: hsl(215, 20%, 17%);
   --grad-bottom-clr: hsl(216, 24%, 12%);
@@ -44,12 +44,16 @@ input {
 body {
   font-family: "Overpass", sans-serif;
   background-color: var(--grey-950-clr);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
+  flex: 1;
   padding: 1.5rem;
-  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -175,6 +179,7 @@ body {
   background-color: var(--grey-900-clr);
   border-radius: 30px;
   padding: 0.6rem 0.8rem;
+  text-align: center;
 }
 
 .thanks-card-title {

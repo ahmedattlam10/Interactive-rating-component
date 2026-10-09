@@ -11,6 +11,8 @@ form.addEventListener("submit", (e) => {
     selectedRate.textContent = checked.value;
     form.classList.add("hidden");
     thanksCard.classList.remove("hidden");
-    thanksCardTitle.focus();
+    thanksCard.scrollIntoView({
+      block: "start",
+    });
   }
 });
